@@ -1,2 +1,3 @@
-# cis3345-fall25-CB-BM
-Digital Forensics case study
+# cis-3345_GDP_CB_BM
+##Network Forensics Investigation
+This GitHub repo documents our attempt to reconstruct an attack from Network Traffic PCAP files alone
