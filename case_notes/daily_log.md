@@ -12,7 +12,7 @@ Top Destination IPs:
 
 Top Protocols:
 
-<img width="1920" height="1029" alt="digital_forensics_10_18_2025_top_protocols" src="https://github.com/user-attachments/assets/f018962b-58a8-458a-a5d8-5263ece5da3f" />
+<img width="675" height="256" alt="digital_forensics_10_18_2025_top_protocols" src="https://github.com/user-attachments/assets/9c925cfa-1db6-46f3-8872-d23ea75f0950" />
 
 
 
