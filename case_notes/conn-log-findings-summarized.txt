@@ -1,0 +1,38 @@
+Summary of findings and inferences from conn.log
+
+Date: 11/26/25
+
+Evidence: botnet-capture-20110815-fast-flux.pcap from the CTU13 dataset
+
+Hashes: 
+MD5: ded5f0029af0bcb71f4dc1116b9a2086
+SHA1: 66e32f7867851ca26d3b46b5798d818b6770c1fe
+SHA-256: b04dfbdcb5735e64f64ea28ba801912c55395efca1c69ab0ac5c2672ebfd372a
+
+Tools: kali linux, zeek
+
+Objective: Identify attacker's IP address and attack methodology
+
+Findings:
+
+1) 1,640 connections on port 6667, standard port for IRC, a protocol commonly used by botnets to establish a C2 communication path.
+676 connetions to port 65500, paired with an external IP, 212.117.171.138 suggests a dedicated custom C2 channel. Possible C2 activity.
+
+2) 13,204 connections with port 25 and 140 connections with port 587. Both ports are used to for email. A high volume of email traffic
+suggests spam, phishing, and/or exfiltrating data. Malicious SMTP activity.
+
+3) SMB/NTLM/DCE_RPC have 124-133 connections and are used for Windows Network Sharing. They also have vulnerabilities and malware may
+try to exploit those vulnerabilities to expand the botnet. Possible worm propagation.
+
+4) 4,821 connections with port 53 and 4,891 count for DNS service. Extremely high volume of DNS requests to a local DNS server 
+(147.32.80.9) suggests rapid Domain resolution with DGA used by Conficker to find its current C2 server
+
+5) 64,162 connections to 184.173.217.40 on port 443 (HTTPS) could be core C2 communication using encrypted traffic to blend in with
+other, legitimate traffic. Suggests C2 activity
+
+6) Longst live connections (94.63.149.150:80 & 212.117.171.138:65500) could be persistent link for recieiving commands/sending data,
+paired with the suspicious 65500 port, suggests C2 activity.
+
+
+Conclusion:
+A single compromised host (147.32.84.165) heavily engaged in COnficker-style botnet activity.
