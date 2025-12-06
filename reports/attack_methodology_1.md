@@ -22,7 +22,7 @@
 Findings from conn.log: Repeatedly reached out by suspected infected host (147.32.84.65). Infected host contacted it every 
 few minutes over http with small request sizes (100-500 bytes) which is indicative of beaconing, common in C2C activity. 60.190.223.75 responded with sometimes 25k+ bytes and even 50k+ bytes, signifying that the infected host downloaded something from 60.190.223.75. The history field in conn.log indicated abnormal TCP handshakes, which happens in malware activity.(source:/case_notes/60.190.223.75-traffic-conn-log.txt)
 
-
+Findings from http.log: This IP is repeated sent GET requests by suspected infected host (147.32.84.65) to odd domains such as 88.perfectexe.com:88, w.nucleardiscover.com:888, and ru.coolnuff.com which could be a bot/malware trying to check in with its C2 server for new commands. In addition, there were two times where a GET request with status code "200" and a mime type of "application/x-dosexec" happened, indicating that the infected host successfully downloaded something from 88.perfectexe.com:88 on 60.190.223.75. In addition, all the URIs in the GET requests had long,random sequence of characters after the "c=" which could be an encrypted malicious payload given the suspicious circumstances surrounding it. The numerous ".php" extensions, paired with the suspicious circumstances, could be malicious payloads using common circumstances in web requests in order to "blend in" with the normal traffic and bypass any simple firewall rules or other security filters.
 
 Status: C2 communication
 
