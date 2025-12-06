@@ -39,7 +39,11 @@ at regular intervals with short durations of a few seconds or less. These connec
 presense known to the C2 server and wait for its next command. These connections, contrasting with the few connections
 where the responder (91.220.0.52) responds with a large-sized response further supports C2 activity.
 
-Findings from http.log:
+Findings from http.log: 147.32.84.165 repeatedly sent POST requests to 91.220.0.52 at steady 30-31 second intervals,
+indicative of automated requests characteristic to C2C beaconing. 91.220.0.52 responds with plain text messages which
+could potentially be instructions for what to do next for the infected host. In conjunction with the kp.exe executable,
+174.32.84.165 probably downloaded the trojan malware, whose main objective could be to maintain a persistent C2C connection
+with 91.220.0.52.
 
 **94.163.149.152**
 
