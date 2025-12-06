@@ -73,3 +73,32 @@ with 91.220.0.52.
 **Summary of Evidence**: Reiterate the most compelling evidence (e.g., "The pattern of requests from 192.0.2.1 strongly aligns with a C2 beaconing operation.").
 
 **Recommendations**: Suggest further steps for the investigation (e.g., Isolate the victim host, Block all identified malicious IPs, Develop WAF rules to detect the described payload pattern).
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Suspicious IP Analysis – Zeek HTTP Log Findings
+
+IP Investigated: 94.63.149.152
+Source (victim) host: 147.32.84.165
+
+Findings:
+
+Two HTTP GET requests were observed from the infected machine to the suspicious IP:
+
+/rus.php
+
+/gc.exe
+
+The .php and .exe file types strongly suggest command delivery and malware download behavior — common in botnet C2 channels.
+
+The MIME type was recorded as Download, confirming file-transfer activity.
+
+The domain ii.ebatmoyhuy.com appears in both entries.
+This domain is likely a DGA-generated malicious domain used for botnet C2 communication.
+
+The /rus.php request returned HTTP 200, indicating successful server communication.
+
+Both entries share the same UID, meaning they occurred within the same malicious session.
+
+Conclusion:
+94.63.149.152 is acting as a command-and-control (C2) server, delivering malware files and receiving requests from the infected host (147.32.84.165).
+This activity is consistent with known botnet behavior (e.g., Conficker-style activity).
