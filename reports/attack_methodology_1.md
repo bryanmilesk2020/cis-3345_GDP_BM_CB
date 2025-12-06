@@ -12,7 +12,7 @@
 
 ### 3.Methodology
 
-**Tools Used**: Zeek
+**Tools Used**: Zeek, Wireshark, VirusTotal
 
 **Criteria for unusual:**
 
