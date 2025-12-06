@@ -3,10 +3,10 @@ Host: shabi.coolnuff.com:2012
 Time it was requested: 2011-08-15T14:14:09-0500
 SHA256 hash: 96831f92f82f6719dd47d9d03edf4e688dfb0c0754bc4c7a24edf123dc05e7bf
 
-![Hashing_on_linux_terminal](C:\Users\miles\VirtualBox VMs\Kali Linux (Digital Forensics)\hashing-on-terminal-1.png)
+![Hashing_on_linux_terminal](cis3345_GDP_BM_CB\case_notes\screenshots\hashing-on-terminal-1.png)
 Caption: Generating SHA256 hash on kp.exe, an executable being requested by 147.32.84.165 from 60.190.223.175
 
-![VirusTotal_results](C:\Users\miles\VirtualBox VMs\Kali Linux (Digital Forensics)\virustotal1.png)
+![VirusTotal_results](cis3345_GDP_BM_CB\case_notes\screenshots\virustotal1.png)
 Caption: Output of hash from VirusTotal showing that the executable is a trojan malware.
 
 Summary: In file "60.190.223.175-traffic-http-log.txt", an executable that was requested by 147.32.84.165 was found. 
