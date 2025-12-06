@@ -19,14 +19,33 @@
 ### 4.Analysis of Malicious IP addresses
 
 **60.190.223.75** 
+
 Findings from conn.log: Repeatedly reached out by suspected infected host (147.32.84.65). Infected host contacted it every 
 few minutes over http with small request sizes (100-500 bytes) which is indicative of beaconing, common in C2C activity. 60.190.223.75 responded with sometimes 25k+ bytes and even 50k+ bytes, signifying that the infected host downloaded something from 60.190.223.75. The history field in conn.log indicated abnormal TCP handshakes, which happens in malware activity.(source:/case_notes/60.190.223.75-traffic-conn-log.txt)
 
-Findings from http.log: This IP is repeated sent GET requests by suspected infected host (147.32.84.65) to odd domains such as 88.perfectexe.com:88, w.nucleardiscover.com:888, and ru.coolnuff.com which could be a bot/malware trying to check in with its C2 server for new commands. In addition, there were two times where a GET request with status code "200" and a mime type of "application/x-dosexec" happened, indicating that the infected host successfully downloaded something from 88.perfectexe.com:88 on 60.190.223.75. In addition, all the URIs in the GET requests had long,random sequence of characters after the "c=" which could be an encrypted malicious payload given the suspicious circumstances surrounding it. The numerous ".php" extensions, paired with the suspicious circumstances, could be malicious payloads using common circumstances in web requests in order to "blend in" with the normal traffic and bypass any simple firewall rules or other security filters.*In this log, an entry with a uri called "/p/out/kp.exe" was requested from host "shabi.coolnuff.com:2012" via 60.190.223.75. Wireshark was used to isolate this entry and save the executable to the file system on kali linux. The executable was hashed (SHA256) on the linux terminal, the hash was then copied and pasted on VirusTotal. The executable was discovered to be a trojan malware, rated malicious by 45/48 vendors that rated it.* 
+Findings from http.log: This IP is repeated sent GET requests by suspected infected host (147.32.84.65) to odd domains such as 88.perfectexe.com:88, w.nucleardiscover.com:888, and ru.coolnuff.com which could be a bot/malware trying to check in with its C2 server for new commands. In addition, there were two times where a GET request with status code "200" and a mime type of "application/x-dosexec" happened, indicating that the infected host successfully downloaded something from 88.perfectexe.com:88 on 60.190.223.75. In addition, all the URIs in the GET requests had long, random sequence of characters after the "c=" which could be an encrypted malicious payload given the suspicious circumstances surrounding it. The numerous ".php" extensions, paired with the suspicious circumstances, could be malicious payloads using common circumstances in web requests in order to "blend in" with the normal traffic and bypass any simple firewall rules or other security filters.*In this log, an entry with a uri called "/p/out/kp.exe" was requested from host "shabi.coolnuff.com:2012" via 60.190.223.75. Wireshark was used to isolate this entry and save the executable to the file system on kali linux. The executable was hashed (SHA256) on the linux terminal, the hash was then copied and pasted on VirusTotal. The executable was discovered to be a trojan malware, rated malicious by 45/48 vendors that rated it.* 
 
 From files.log: suspected infected host attempted twice to get a resource with a mime_type of "application?x-dosexec" indicating it was trying to download something from 60.190.223.75.
 
 Status: C2C communication, malware detected 
+
+**91.220.0.52**
+
+Findings from conn.log: 147.32.84.165 is the originator of all connections, and 91.220.0.52 was the destination for all 
+connections. Most connections were done on port 80 which is for legitimate http traffic, nearly all connections were
+established and finished as intended. There are a few connections where the 91.220.0.52 responds to 147.32.84.165 with
+large byte sizes, potentially indicating that 147.32.84.165 was trying to download something. Most of connections happened
+at regular intervals with short durations of a few seconds or less. These connections had requests of small size from originator and destination, which happens in C2C activity when beacon tries to send short messages trying to make its
+presense known to the C2 server and wait for its next command. These connections, contrasting with the few connections
+where the responder (91.220.0.52) responds with a large-sized response further supports C2 activity.
+
+Findings from http.log:
+
+**94.163.149.152**
+
+**173.192.170.88**
+
+**94.63.150.53**
 
 ### 5.1. Command and Control (C2) Activity
 **Common Endpoint**: The specific path targeted (e.g., /images/upload.php or a non-existent path like /admin/heartbeat).
