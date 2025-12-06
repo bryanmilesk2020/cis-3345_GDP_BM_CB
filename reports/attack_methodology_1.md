@@ -102,3 +102,7 @@ Both entries share the same UID, meaning they occurred within the same malicious
 Conclusion:
 94.63.149.152 is acting as a command-and-control (C2) server, delivering malware files and receiving requests from the infected host (147.32.84.165).
 This activity is consistent with known botnet behavior (e.g., Conficker-style activity).
+
+from IMG_6156.HEIC
+147.32.84.165    94.63.149.152   /rus.php      GET    200   Download   C8pOS22Y0bsK5Iuyng    -        ii.ebatmoyhuy.com   CTHD3m4MIaRr7Ac1b8
+147.32.84.165    94.63.149.152   /gc.exe       GET    -     Download   -                     -        ii.ebatmoyhuy.com   CTHD3m4MIaRr7Ac1b8
