@@ -1,0 +1,32 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2025-10-15-16-16-38
+#fields	ts	fuid	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	string	addr	port	addr	port	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1313422070.504879	Fh8XVk4i28QxQXyaA	C6kagN33ocvJWTfyYb	147.32.84.165	1701	60.190.223.75	88	HTTP	0	PE	application/x-dosexec	-	0.000265	F	F	2643	55808	0	0	F	-	-	-	-	-	-	-
+1313422150.516438	FyJT0r2wpA7OmzDXNk	CcHbxPyTp31CCyAZ5	147.32.84.165	1949	60.190.223.75	888	HTTP	0	(empty)	text/plain	-	0.000000	F	F	88	88	0	0	F	-	-	-	-	-	-	-
+1313425815.707809	F7miP84QNLeMtXMtI8	CkFnAP3rhWYjVXcsp2	147.32.84.165	3698	60.190.223.75	888	HTTP	0	(empty)	text/plain	-	0.000000	F	F	88	88	0	0	F	-	-	-	-	-	-	-
+1313429629.195225	F4m36F4YXTVeytk5Hb	C0mkKl2XMnfgnXcIQ9	147.32.84.165	3366	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313429702.625042	Fw2ROWThr878dEfl2	CFAh7e30YZDzZq77o7	147.32.84.165	3471	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313429777.782334	FRSHFU3IShcK0aMDjg	CSA6np4W1m7dMd2b58	147.32.84.165	3570	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313429878.247412	FWHPNy2vGM9lT8Xtbe	CiAs8N1Dqzl4xxL3f3	147.32.84.165	3656	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313429974.912392	Fe9jfx3NfkyU6Otf39	CHbDow2XRxmcygBXqc	147.32.84.165	3738	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313430049.688684	FTfZh61hdiAVNFvu56	CF0F4v2RmT88RN5bSf	147.32.84.165	3811	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313430191.001107	FD2W8427ZROPl2pzEi	CHRuWAN8aB3szafHb	147.32.84.165	3906	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313430315.650951	FZGCZW1hdN2NKtvf81	ChESNM3OlzonDfAxIb	147.32.84.165	3983	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313430325.534232	FukwSP22iKMGKMWl0l	CI64Oa4vFD3GCJAgjg	147.32.84.165	4021	60.190.223.75	888	HTTP	0	(empty)	text/plain	-	0.000000	F	F	28	28	0	0	F	-	-	-	-	-	-	-
+1313430348.942262	FHTjLe3dSzTyiSCIDb	CtSjlr26uwr2ytQEtb	147.32.84.165	4101	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313430369.763712	F8CSKz13G2dhbsRB8f	CLjw4Q3OUYPhiUiXa3	147.32.84.165	4143	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313435570.771434	FoA07p1x6GEioaxDZa	CvXiLE2Up3FS7UPUDl	147.32.84.165	1038	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313435571.780818	FICuwu47PWR7SJAAcf	CWnK3G4ET0j9JVuOV3	147.32.84.165	1039	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	1	-	0	0	F	-	-	-	-	-	-	-
+1313435663.970642	FoYAYLUOIgG0MXb1	CzeI9M10FJKKeDgui8	147.32.84.165	1048	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435665.357058	FOwjp233SkNx8ct9u8	CVUhrU1GQEMLFnucua	147.32.84.165	1050	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435669.141463	F3IxD01bpcD7u8a5ph	CxyIiL2BG3nNQsXCp4	147.32.84.165	1062	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435670.175893	F4c285UiynYIoPeRd	CaSxESRBvds3PK2Hl	147.32.84.165	1066	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435674.295938	FLuaYP3HHUIhkMrerc	CQ802x1jO1zBAB9f94	147.32.84.165	1069	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435675.298453	FiQDLC1LpJrrTONwGb	CVDsSg27aFFCinmQOj	147.32.84.165	1070	60.190.223.75	888	HTTP	0	(empty)	-	-	0.000000	F	F	2	-	0	0	F	-	-	-	-	-	-	-
+1313435865.051347	FGQfJPGP44KdxR839	C1aYAI1ty9qc2pvhj9	147.32.84.165	1170	60.190.223.75	88	HTTP	0	PE	application/x-dosexec	-	1.871542	F	F	22228	55808	33580	0	F	-	-	-	-	-	-	-
+#close	2025-10-15-16-17-13
