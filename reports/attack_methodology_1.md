@@ -20,7 +20,13 @@
 
 **209.173.182.133**
 
-Findings from conn.log: 209.173.182.133 repeatedly
+Findings from conn.log: 209.173.182.133 repeatedly initiates connections to 147.32.84.65 on port 3389, which is the 
+standard port for Remote Desktop Protocol, sometimes used by attackers to get remote access to a machine (in this case,
+147.32.85.65). In addition, the connections are repeated at steady 5-6 second intervals which is a sign that it is 
+automated, characteristic of C2C activity. The conn_state field was "RSTR", or resetted every connection, which potentially
+means 209.173.182.133 was cycling through connections fast to evade detection. 
+
+Status: C2C communication.
 
 **60.190.223.75** 
 
