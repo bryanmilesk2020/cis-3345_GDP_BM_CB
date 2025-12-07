@@ -57,6 +57,17 @@ with 91.220.0.52.
 
 **94.163.149.152**
 
+Findings from conn.log: Contacted by 147.32.84.165 twice, at 10:19 and 2:13 August 15th. Duration for both connections
+only lasted less than a second and were both "S2" connection state (responder, 94.163.149.152, didn't close the connection).
+Originator, 147.32.84.165 initiated with a message of 90 bytes while 94.163.149.152 responded with a message of 25791 bytes
+both times indicating a download.
+
+Findings from http.log: 94.163.149.152 was asked a GET request from 147.32.84.165 twice for a download from host
+ii.ebatmoyhuy.com for resource, /rus.php. The download was searched for in Wireshark and saved. The SHA256 hash was 
+calculated in the terminal and searched in VirusTotal. 57/70 vendors rated that file as malicious.
+
+Status: Trojan malware activity
+
 **173.192.170.88**
 
 **94.63.150.53**
