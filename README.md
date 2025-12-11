@@ -10,3 +10,7 @@ The analysis focuses on identifying malicious communication patterns, confirming
    
 The investigation confirms a full compromise by Conficker-style Trojan malware, culminating in sustained RDP-based control.
 
+| Team member  | Story Points | Total Contribution |
+| ------------- | ------------- | ------------- |
+| Bryan Mileski  | x  | 60% |
+| Caylan Barnes  | x  | 40% |
