@@ -14,6 +14,7 @@ Wire shark was used to extract files from pcap file and save suspicious intact f
 ### Virus Total
 Virus Total was used to identify any malicious files by searching their hashes ​
 
+## Summary
 1. Project Overview
 
 This repository documents the network forensics investigation into the compromise of an internal host (147.32.84.165) that was utilized as a node in a sophisticated, multi-stage Command and Control (C2) botnet operation.
