@@ -23,10 +23,31 @@ The analysis focuses on identifying malicious communication patterns, confirming
 
 2. Key Findings
    
-The investigation confirms a full compromise by Conficker-style Trojan malware, culminating in sustained RDP-based control.
+The analysis focuses on identifying malicious communication patterns, confirming malware delivery, and mapping the entire kill chain from initial infection to interactive remote control by the threat actor.
+
+2. Repository structure
+/casenotes: information notes (subdirectories: /data_exfiltration, /from_conn.log, /from_files.log, /from_http.log, /from_rdp.log, /screenshots)
+/evidence: contains PCAP files used as the dataset and suspicious malware (subdirectories: /discovered_malicious_files)
+/presentation: slideshhow summarizing project
+/reports: includes summary of reconstructing attack methodology and final reports
+/tools: documents software used to conduct analysis
+/notebook and /scripts are empty
+
+4. Key Findings
+   
+The investigation confirms C2C activity and a full compromise by Conficker-style Trojan malware, culminating in sustained RDP-based control. The infected host is 147.32.84.165. Suspicious external IP is 209.173.182.133.
+
+5. Key Commands Used
+
+cat conn.log | zeek-cut id.orig_h | sort | uniq -c | sort -nr | head (finds top IP addresses initiating connections)
+
+cat http.log | zeek-cut ts id.orig_h id.resp_h method uri host resp_mime_types | grep "exe"  (finds any executable files in http traffic)
+
+cat http.log | zeek-cut ts id.orig_h id.resp_h method uri host resp_mime_types | grep "php"  (finds any suspicious php files in http traffic) 
+
 
 | Team member  | Story Points | Total Contribution |
 | ------------- | ------------- | ------------- |
-| Bryan Mileski  | 6  | 55% |
-| Caylan Barnes  | 5  | 44% |
-| Team Total | 11 | 100% |
+| Bryan Mileski  | 18  | 55% |
+| Caylan Barnes  | 15  | 44% |
+| Team Total | 33 | 100% |
