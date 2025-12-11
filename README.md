@@ -49,5 +49,5 @@ cat http.log | zeek-cut ts id.orig_h id.resp_h method uri host resp_mime_types |
 | Team member  | Story Points | Total Contribution |
 | ------------- | ------------- | ------------- |
 | Bryan Mileski  | 18  | 55% |
-| Caylan Barnes  | 15  | 44% |
+| Caylan Barnes  | 15  | 45% |
 | Team Total | 33 | 100% |
