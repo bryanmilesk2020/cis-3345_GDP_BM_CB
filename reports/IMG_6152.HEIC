@@ -16,4 +16,7 @@
 * Phishing kits disguised as Outlook Web Access
 
 ## Summary
-The logs show traffic from a machine infected with malware communicating with a malicious server. The malware repeatedly checks in with a C2 server, exfiltrates email data, pretends to interact with Microsoft webmail endpoints, likely steals credentials, and may send phishing messages through the victim's account.
+The logs show traffic from a machine infected with malware communicating with a malicious server. 
+The malware repeatedly checks in with a C2 server, exfiltrates email data, pretends to interact with Microsoft webmail endpoints, 
+likely steals credentials, and may send phishing messages through the victim's account.
+
