@@ -14,4 +14,4 @@ The investigation confirms a full compromise by Conficker-style Trojan malware, 
 | ------------- | ------------- | ------------- |
 | Bryan Mileski  | 6  | 60% |
 | Caylan Barnes  | 4  | 40% |
-| Team Total | x | 100% |
+| Team Total | 10 | 100% |
